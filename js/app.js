@@ -1,7 +1,8 @@
 $(function() {
 	
 	//set map options
-	var myLatLng = {lat: 37.578265, lng: -122.342668};
+	var myLatLng = {lat: 37.578120, lng: -122.342642};
+	
 	var mapOptions = {
 		center: myLatLng,
 		zoom: 15,

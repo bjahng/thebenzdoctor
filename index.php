@@ -93,7 +93,8 @@
 	<!-- About -->
 	<section id="about" class="container">
 		<h2 class="accent">About</h2>
-		<p>My name is Ray "The Benz Doctor". I am factory trained and have been repairing Mercedes-Benz automobiles for over 25 years. My work is of the highest quality and my prices are reasonable.</p>
+		<p>My name is Ray "The Benz Doctor".</p>
+		<p>I am factory trained and have been repairing Mercedes-Benz automobiles for over 25 years. My work is of the highest quality and my prices are reasonable.</p>
 		<p>Offers:
 			<ul>
 				<li>Early Bird Drop Off</li>
@@ -110,19 +111,56 @@
 	<!-- Location -->
 	<section id="location" class="container">
 		<h2 class="accent">Location</h2>
-		
-		<div class="location-text col-md-6">
-			<p>I am located at <span class="accent">123 California Dr, Burlingame, CA 94010</span>.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In officia eaque id, suscipit nesciunt, modi unde tenetur atque ipsum ullam omnis adipisci rem odit illum quisquam libero recusandae aut asperiores.</p>
-		</div>
-		<div class="location-map col-md-6" id="location-map">
+		<div class="row">
+			<div class="location-text col-sm-6">
+				<p>I am located at <span class="strong">123 California Dr, Burlingame, CA 94010</span>.</p>
+				<p>My shop is in a very central location.  It is close to the Burlingame Caltrain station and many shopping locations!</p>
+			</div>
+			<div class="location-map col-sm-6" id="location-map">
+			</div>
 		</div>
 	</section>
 
 	<!-- Contact -->
 	<section id="contact" class="container">
 		<h2 class="accent">Contact</h2>
-		<p>(650) 759-0003</p>
+		<p>Please contact me if you have any questions.</p>
+		<br />
+		<div class="row">
+			<div class="col-sm-3">
+				<p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;(650) 759-0003</p>
+				<p><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;thebenzdoctor@gmail.com</p>
+			</div>
+		
+			<div class="contactform col-sm-offset-1 col-sm-6">
+								
+				<form method="post">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" placeholder="Name" class="form-control" maxlength="60" required>
+					</div>
+					<div class="form-group">
+						<label for="phone_number">Phone Number:</label>
+						<input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" class="form-control" maxlength="12" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="text" name="email" id="email" placeholder="Email" class="form-control" maxlength="60">
+					</div>
+					<div class="form-group">
+						<label for="carinfo">Mercedes Model:</label>
+						<input type="text" name="carinfo" id="carinfo" placeholder="Model" class="form-control" maxlength="20">
+					</div>
+					<div class="form-group">
+						<label for="message">Message:</label>
+						<textarea name="message" id="message" class="form-control" rows="5" maxlength="400" required></textarea>
+					</div>
+					<div class="form-group form-button">
+						<input type="submit" name="submit" class="btn btn-success btn-large" value="Send Message">
+					</div>
+				</form>
+			</div>
+		</div>
 	</section>
 
 </div>
