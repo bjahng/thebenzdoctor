@@ -5,27 +5,22 @@ body {
 }
 
 .accent {
-  margin-bottom: 35px;
+  margin: 10px auto 45px auto;
+  text-align: center;
   color: #3399f7;
-  font-size: 40px;
+  font-size: 42px;
   font-family: "Oswald", sans-serif;
-}
-
-#contents.container-fluid {
-	padding: 0;
 }
 
 #contents {
   background-color: #e9e9e9;
+  padding: 0;
 }
 
 .container {
 	max-width: 900px;
 }
 
-.box {
-  margin-left: 10px;
-}
 #nav2 {
   background-color: #1e8df4;
   padding-top: 52px;
@@ -36,7 +31,7 @@ body {
 #nav2 .info {
   font-family: "Oswald", sans-serif;
   font-size: 16 px;
-  padding: 3px 0;
+  padding: 3px 0 ;
   text-shadow: 0.5px 0.5px 0px #545454;
   margin-bottom: 0;
   letter-spacing: 0.8px;
@@ -77,58 +72,102 @@ body {
   width: 580px;
 }
 
-.carousel-inner img {
+#home .carousel-inner img {
 	min-width: 100%;
-	max-width: none;
-	height: 730px;
-  min-height: 450px;
-	max-height: 730px;
+	/*max-width: none;*/
+	height: 720px;
+  /*min-height: 450px;*/
+	max-height: 720px;
 	object-fit: cover;
 	overflow: hidden;
 }
 
 #about, #location, #contact {
-	padding: 100px 0 80px 0;
+	padding: 100px 0 100px 0;
 }
 
 #about #about-pic {
   border-radius: 10px;
   box-shadow: 0 0 10px #3399f7;
+}
 
+#about .free {
+  font-size: 17px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#about .list_bullets {
+  color: #3399f7;
+}
+
+#about .list_text {
+  color: #333;
 }
 
 #location {
-	background-color: #195890;
-  color: #9bccf7;
+	color: #aed6f9;
+  background-color: #174c7a;
+  /*border-color: #123b5e;*/
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#1f67a5), to(#174c7a));
+  background-image: -webkit-linear-gradient(top, #1f67a5, 0%, #174c7a, 100%);
+  background-image: -moz-linear-gradient(top, #1f67a5 0%, #174c7a 100%);
+  background-image: linear-gradient(to bottom, #1f67a5 0%, #174c7a 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1f67a5', endColorstr='#ff174c7a', GradientType=0);
 }
 
 #location .accent {
   color: #fff;
 }
 
+#location .location-text {
+  text-align: center;
+}
+
 #location .strong {
 	font-weight: 700;
   font-size: 17px;
-  text-shadow: 0.5px 0.5px 0 #545454;
+  /*font-style: italic;*/
+  text-shadow: 0.5px 0.5px 0 #000;
+}
+
+#location .logorow1 {
+  margin: 30px 0 10px 0;
+}
+
+#location .logorow2 {
+  margin: 10px 0 30px 0;
+}
+
+#location .logo {
+  text-align: center;
+  padding-left: 7.5px;
+}
+
+#location .logo img {
+  border-radius: 5px;
 }
 
 #location-map {
-	height: 400px;
+	height: 450px;
 	border-radius: 10px;
-  box-shadow: 0 0 20px #fff;
+  /*box-shadow: 0 0 10px #fff;*/
 }
 
 #contact {
 	padding-bottom: 80px;
+  background: url("../images/blue_benz.jpg") 50% 0 no-repeat fixed;
+}
+
+#contact .container {
+  background-color: #e9e9e9;
+  max-width: 590px;
+  border-radius: 10px;
 }
 
 #contact .contactform-text {
-  margin: 80px auto 30px auto;
-}
-
-#contact #contact-pic {
-  border-radius: 10px;
-  box-shadow: 0 0 10px #3399f7;
+  text-align: center;
 }
 
 #contact .form-button {
@@ -136,14 +175,15 @@ body {
 }
 
 #contact .contactform {
-  /*border: 1px solid #bdbdbd;*/
+  margin-top: 40px;
+  margin-bottom: 40px;
   border-radius: 10px;
   padding-top: 10px;
   box-shadow: 0 0 10px #3399f7;
 }
 
 .footer {
-	height: 150px;
+	height: 120px;
 	color: #fff;
 	text-align: center;
 	background-color: #16191c;
@@ -156,7 +196,7 @@ body {
 }
 
 .footer p {
-	padding-top: 75px;
+	padding-top: 60px;
 }
 
 
@@ -178,7 +218,8 @@ body {
   color: #3399f7;
   font-size: 36px;
   font-weight: 700;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
+  padding-left: 50px;
 }
 .navbar-custom .nav_address {
 	color: #fff;
