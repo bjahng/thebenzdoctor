@@ -1,6 +1,7 @@
 body {
 	font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  color: #000;
 	position: relative;
 }
 
@@ -55,8 +56,6 @@ body {
 #home .tagline {
   font-family: "Unica One", cursive;
   font-size: 66px;
-  /*letter-spacing: -0.1px;*/
-  /*font-style: italic;*/
   text-shadow: -0.25px 0 black, 0 0.25px black, 0.25px 0 black, 0 -0.25px black;
   margin: 0 auto;
 }
@@ -74,12 +73,19 @@ body {
 
 #home .carousel-inner img {
 	min-width: 100%;
-	/*max-width: none;*/
-	height: 720px;
-  /*min-height: 450px;*/
-	max-height: 720px;
-	object-fit: cover;
-	overflow: hidden;
+	max-width: none;
+  height: 720px;
+  object-fit: cover;
+  object-position: 80% 20%;
+  overflow: hidden;
+}
+
+#home .carousel-inner .compat-object-fit {
+  min-width: 100%;
+  max-width: none;
+  height: 720px;
+  background-size: cover;
+  background-position: 80% 20%;
 }
 
 #about, #location, #contact {
@@ -102,13 +108,12 @@ body {
 }
 
 #about .list_text {
-  color: #333;
+  color: #000;
 }
 
 #location {
 	color: #aed6f9;
   background-color: #174c7a;
-  /*border-color: #123b5e;*/
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#1f67a5), to(#174c7a));
   background-image: -webkit-linear-gradient(top, #1f67a5, 0%, #174c7a, 100%);
   background-image: -moz-linear-gradient(top, #1f67a5 0%, #174c7a 100%);
@@ -182,17 +187,21 @@ body {
   box-shadow: 0 0 10px #3399f7;
 }
 
+#contact .contactform label {
+  margin-top: 5px;
+}
+
 .footer {
 	height: 120px;
 	color: #fff;
 	text-align: center;
 	background-color: #16191c;
-	background-image: -webkit-gradient(linear, left 0%, left 100%, from(#2c3339), to(#16191c));
-	background-image: -webkit-linear-gradient(top, #2c3339, 0%, #16191c, 100%);
-	background-image: -moz-linear-gradient(top, #2c3339 0%, #16191c 100%);
-	background-image: linear-gradient(to bottom, #2c3339 0%, #16191c 100%);
+	background-image: -webkit-gradient(linear, left 0%, left 100%, from(#000000), to(#16191c));
+	background-image: -webkit-linear-gradient(top, #000000, 0%, #16191c, 100%);
+	background-image: -moz-linear-gradient(top, #000000 0%, #16191c 100%);
+	background-image: linear-gradient(to bottom, #000000 0%, #16191c 100%);
 	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2c3339', endColorstr='#ff16191c', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff16191c', GradientType=0);
 }
 
 .footer p {
@@ -219,7 +228,14 @@ body {
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 1px;
-  padding-left: 50px;
+  padding-left: 10px;
+  padding-top: 8.2px;
+}
+.navbar-custom .navbar-brand .caduceus {
+  display: inline;
+  height: 43px;
+  width: 30px;
+  padding-bottom: 7px;
 }
 .navbar-custom .nav_address {
 	color: #fff;
@@ -326,4 +342,36 @@ body {
 }
 .navbar-custom .navbar-link:hover {
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  #nav2 .info {
+    font-size: 12px;
+  }
+  /*Carousel starts right after fixed nav and nav2*/
+  #home.container-fluid {
+    padding: 74px 0 0 0;
+  }
+  #home .tagline {
+    font-size: 42px;
+  }
+  #home .tagline-top {
+    width: 410px;
+  }
+  #home .tagline-bottom {
+    width: 370px;
+  }
+  #about .col-sm-4 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #location .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+ .navbar-custom .navbar-brand {
+  font-size: 22px;
+ } 
 }

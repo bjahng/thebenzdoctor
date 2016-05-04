@@ -1,5 +1,20 @@
 $(function() {
 
+	// Modernizr JS to detect object-fit functionality because object-fit does not work on Edge browsers
+	// If it doesn't, it replaces the img's with background url's
+	if ( ! Modernizr.objectfit ) {
+	  $('.carousel-inner .item').each(function () {
+	    var $container = $(this),
+	        imgUrl = $container.find('img').prop('src');
+	    if (imgUrl) {
+	      $container
+	        .css('backgroundImage', 'url(' + imgUrl + ')')
+	        .addClass('compat-object-fit');
+	    }
+	  });
+	  $('.carousel-inner .item .pic').remove();
+	}
+
 	// Cache the Window object
 	var $window = $(window);
 	
@@ -12,7 +27,7 @@ $(function() {
 		
 			// Scroll the background at var speed
 			// the yPos is a negative value because we're scrolling it UP!								
-			var yPos = (-($window.scrollTop() / $bgobj.data('speed'))) + 75;
+			var yPos = (-($window.scrollTop() / $bgobj.data('speed'))) + 170;
 			
 			// Put together our final background position
 			var coords = '50% '+ yPos + 'px';
